@@ -1,8 +1,11 @@
-# -*- coding: utf-8 -*-
+
 """
 Created on Fri Sep 16 21:39:07 2022
 
-@author: vicky
+Guvi Task 1
+Name: Vigneshwaran M
+Batch : D42
+Email: vicky12799@gmail.com
 """
 import re;
 
@@ -19,8 +22,7 @@ def register():
     print("Registration Successful")
     print("Redirecting to login page")
     login(username,password)
-    
-    
+      
 
 def validateUsername(username):
     regex = r'\b[A-Za-z][A-Za-z0-9.]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
@@ -73,6 +75,7 @@ def login(username=None,password=None):
     data = database()
     if username in data:
         if data[username].strip()==password:
+            print("Logging in... please wait.")
             print('login success')
             pass
         else:
@@ -159,7 +162,7 @@ def homepage(option=None):
         print("please enter a valid option")
         homepage()
     
-print("Please enter an option")
+print("Please enter an option\n")
 homepage()
 
 
