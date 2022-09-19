@@ -77,7 +77,7 @@ def login(username=None,password=None):
         if data[username].strip()==password:
             print("Logging in... please wait.")
             print('login success')
-            pass
+            return "login success"
         else:
             print("wrong password")
             option = input('retry | forgot password: ')
